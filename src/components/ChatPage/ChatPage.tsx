@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './ChatPage.scss';
 import { MessageForm } from '../MessageForm/MessageForm';
 import { MessageList } from '../MessageList/MessageList';
-import classNames from 'classnames';
 import { API_WEBSOCKET } from '../../utils/config';
 import { User } from '../../types/user';
+import classNames from 'classnames';
 import { Room } from '../../types/room';
 import { Error } from '../../types/error';
 import { Message } from '../../types/message';
@@ -68,7 +68,7 @@ export const ChatPage: React.FC<Props> = ({
     return () => {
       newSocket.close();
     };
-  }, [selectedRoom]);
+  }, [selectedRoom, setSelectRoom, setError, setRefresh]);
 
   const sendMessage = (text: string) => {
     try {

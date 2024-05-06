@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import './RoomPage.scss';
-import classNames from 'classnames';
 import { API_URL } from '../../utils/config';
 import { Room } from '../../types/room';
 import { User } from '../../types/user';
+import classNames from 'classnames';
 
 type Props = {
   selectedRoom: Room | null;
